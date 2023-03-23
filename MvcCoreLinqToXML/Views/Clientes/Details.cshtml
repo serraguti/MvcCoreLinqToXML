@@ -1,0 +1,18 @@
+﻿@model Cliente
+
+<a asp-controller="Clientes" asp-action="Index">
+    Volver a Index
+</a>
+
+<div class="card" style="width: 18rem;">
+    <img src="@Model.Imagen" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Nombre</h5>
+        <p class="card-text">Dirección: @Model.Direccion</p>
+        <p class="card-text">Email: @Model.Email</p>
+        <a asp-controller="Clientes"
+            asp-action="Delete"
+            asp-route-idcliente="@Model.IdCliente"
+            class="btn btn-danger">Delete</a>
+    </div>
+</div>
